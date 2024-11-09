@@ -26,7 +26,7 @@ export async function GET(req: Request) {
   }
 
   try {
-    const filePath = path.join(process.cwd(), 'public', 'bin_data.csv');
+    const filePath = path.join(process.cwd(), 'public', 'bin-data.csv');
     const bins = await parseCSV(filePath);
 
     const binData = bins.find((binEntry: BinData) => binEntry.BIN === bin);
